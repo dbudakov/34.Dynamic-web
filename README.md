@@ -34,3 +34,12 @@ Gitlab:    http://192.168.100.111:81
 ELK stack: http://192.168.100.111:82
 Zabbix:    http://192.168.100.111:83
 ```
+Дополнительно:
+```
+P.S. Интересное решение с selinux модулями. Ещё варианты:
+setsebool nis_enabled on или
+https://docs.ansible.com/ansible/latest/modules/seboolean_module.html
+
+yum install -y setools && semanage port -a -t http_port_t -p tcp 81
+https://docs.ansible.com/ansible/latest/modules/seport_module.html
+```
